@@ -23,7 +23,7 @@ public class test {
         assertEquals(3, score("THREES", new int[] { 3, 4, 1, 5, 2 }));
         assertEquals(9, score("THREES", new int[] { 3, 1, 2, 3, 3 }));
     }
-
+/*
     @Test
     void shouldScoreFours() {
         assertEquals(12, score("FOURS", new int[] { 4, 1, 3, 4, 4 }));
@@ -40,7 +40,7 @@ public class test {
     void shouldScoreSixes() {
         assertEquals(12, score("SIXES", new int[] { 6, 1, 3, 6, 4 }));
         assertEquals(6, score("SIXES", new int[] { 6, 2, 4, 1, 3 }));
-    }
+    } */
 
     public int score(String categoryName, int[] dice) {
 
@@ -70,7 +70,8 @@ public class test {
             for (int i = 1; i < frequencies.length; i++) {
                 return frequencies[diceValue] * diceValue;
             }
-    }
+            return 0;
+        }
 
     }
 
