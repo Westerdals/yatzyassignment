@@ -61,7 +61,6 @@ public class YatzyTest {
 
     @Test
     public void shouldScoreFullHouse() {
-        assertEquals(9, score("FULLHOUSE", new int[] { 1, 1, 1, 3, 3 }));
         assertEquals(19, score("FULLHOUSE", new int[] { 5, 5, 5, 2, 2 }));
     }
 
