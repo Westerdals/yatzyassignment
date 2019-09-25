@@ -262,7 +262,23 @@ public class YatzyTest {
 
         // Dice score based on two separate pairs, but favors highest occurrences if more pairs
         public int doublePairDiceScore(int[] frequencies) {
-            int firstPair = 0;
+            for (int i = 1; frequencies.length > i; i++) {
+                if (frequencies[i] > 1) {
+                    for (int j = 1; frequencies.length > j; j++) {
+                        if (i == j) {
+                            continue;
+                        }
+                        if (frequencies[j] > 1) {
+                            return (i * frequencies[i]) + (j * frequencies[j]);
+                        }
+                    }
+                }
+            }
+            return 0;
+        }
+
+        /*
+        int firstPair = 0;
             int secPair = 0;
             for (int i = 1; i < frequencies.length; i++) {
                 if (frequencies[i] > 1) {
@@ -281,6 +297,15 @@ public class YatzyTest {
             }
             return (firstPair * 2) + (secPair * 2);
         }
+
+        Ytterste for loop:
+        - let etter et par (frekvens på 2 eller høyere)
+
+        Innerste for loop:
+        - let etter annet par
+        - hopp over samme index på frekvensarray
+
+         */
 
 
         // Dice score based on pairs, could be two of 5 example
