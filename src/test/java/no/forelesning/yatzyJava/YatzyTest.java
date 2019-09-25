@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class test {
+public class YatzyTest {
 
     @Test
     void shouldWork() {
@@ -86,7 +86,7 @@ public class test {
 
      @Test
      public void shouldScoreFiveOfSame() {
-        assertEquals(15, score("FIVEOFSAME", new int[] { 3, 3, 3, 3, 3 }));
+        assertEquals(50, score("FIVEOFSAME", new int[] { 3, 3, 3, 3, 3 }));
      }
 
     //
@@ -165,7 +165,7 @@ public class test {
 
         // five of the same
         public int fiveOfSameScore(int[] frequencies) {
-            for (int i = 1; frequencies.length > 4; i++) {
+            for (int i = 1; frequencies.length > i; i++) {
                 if (i == 5);
             }
             return 50;
